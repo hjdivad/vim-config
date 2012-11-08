@@ -1,0 +1,24 @@
+snippet d
+	describe '${1}' do
+		${2}
+	end
+snippet c
+	context '${1}' do
+		${2}
+	end
+snippet it
+	it '${1}' do
+		${2}
+	end
+snippet b
+	before do
+		${2}
+	end
+snippet a
+	after do
+		${2}
+	end
+snippet e
+	expect{ ${1}}.${2:to} ${3}
+snippet ec
+	expect{ ${1}}.to change{ ${2}}.from( ${3}).to( ${4})
