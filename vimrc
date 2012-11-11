@@ -34,4 +34,13 @@ filetype plugin indent on
 syntax on
 
 
+" Avoid infinite loops when the pwd is $HOME
+if !(getcwd() == $HOME)
+  if filereadable(".vimrc")
+    source .vimrc
+  endif
+  set runtimepath+=./.vim
+endif
+
+
 " vim:ft=vim:
