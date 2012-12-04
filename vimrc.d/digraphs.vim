@@ -7,6 +7,7 @@ if has("digraphs")
   digraph NN 8469 " ℕ
   digraph ZN 8484 " ℤ
   digraph ** 9733 " ★
+  digraph cc 8984 " ⌘
 
   digraph is 7522 " ᵢ
 endif
