@@ -9,5 +9,8 @@ if has("digraphs")
   digraph ** 9733 " ★
   digraph cc 8984 " ⌘
 
+  digraph <3 9829 " ♥
+
   digraph is 7522 " ᵢ
 endif
+
