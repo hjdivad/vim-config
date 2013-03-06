@@ -26,5 +26,11 @@ nmap <leader>t :CommandT<CR>
 " …and also force a cache flush
 nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
-" Clear search highlight with return
-nnoremap <CR> :nohl<CR><CR>
+
+function s:update_decorations()
+  " Don't need to call gitgutter since syntasticcheck does this indirectly by
+  " saving
+  "call GitGutter()
+  exec "SyntasticCheck"
+endfunction
+nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>
