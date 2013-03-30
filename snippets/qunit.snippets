@@ -1,0 +1,17 @@
+snippet t
+	test("${1}", function() {
+		${2}
+	});
+snippet e
+	equal(${1}, ${2}, "${3}");
+snippet de
+	deepEqual(${1}, ${2}, "${3}");
+snippet m
+	module('${1}', {
+		setup: function() {
+			${2}
+		},
+		teardown: function() {
+			${3}
+		}
+	});
