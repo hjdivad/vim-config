@@ -26,11 +26,17 @@ nmap <leader>t :CommandT<CR>
 " …and also force a cache flush
 nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
+" Move row-wise instead of line-wise
+nnoremap j gj
+nnoremap k gk
+
 
 function s:update_decorations()
   " Don't need to call gitgutter since syntasticcheck does this indirectly by
   " saving
   "call GitGutter()
-  exec "SyntasticCheck"
+  if ! exists("g:syntastic_disabled")
+    exec "SyntasticCheck"
+  endif
 endfunction
 nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>

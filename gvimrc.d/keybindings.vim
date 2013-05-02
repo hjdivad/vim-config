@@ -23,7 +23,7 @@ map <D-9> 9gt
 map <D-0> 10gt
 
 " Reset to 10 tabs with a temporary todo list on tab 10
-function s:reset()
+function g:tabReset()
   while tabpagenr('$') < 10
     execute ":tabnew"
   endwhile
@@ -34,4 +34,4 @@ function s:reset()
   silent edit ~/todo.mkd
 endfunction
 
-nmap <leader>R :call <SID>reset()<CR>
+nmap <leader>R :call g:tabReset()<CR>

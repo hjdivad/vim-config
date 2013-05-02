@@ -2,6 +2,10 @@ snippet t
 	test("${1}", function() {
 		${2}
 	});
+snippet th
+	throws(function() {
+		${3}
+	}, /${1:ErrorPattern}/, "${2:message}");
 snippet e
 	equal(${1}, ${2}, "${3}");
 snippet de

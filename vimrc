@@ -13,19 +13,16 @@ set directory=/var/tmp
 
 set wildmode=list:longest
 
-" Disable bells
-set visualbell
-set t_vb=
 
 " Turn on line numbers
-set nu
+set number
+" Highlight current line
+set cursorline
 
 set ruler
 " Always show status line
 set laststatus=2
 
-
-set diffopt=filler,iwhite,vertical
 
 
 

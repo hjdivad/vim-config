@@ -1,4 +1,5 @@
 runtime! gvimrc.d/**.vim
+runtime! gvimrc.local.d/**.vim
 
 
 " Avoid infinite loops when the pwd is $HOME
