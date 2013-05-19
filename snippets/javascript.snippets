@@ -1,7 +1,7 @@
 snippet f
 	function ${1}(${2}) {
 		${3}
-	};
+	}
 snippet fn
 	function ${1:name}(${2}) {
 		${3}
@@ -23,6 +23,17 @@ snippet for
 		if ( ! ${2:expression}.hasOwnProperty(prop)) { continue; }
 
 		${3}
+	}
+snippet fori
+	for (var item, i = 0; i < ${1:expression}.length; ++i ) {
+		item = ${2:expression}[i];
+		${3}
+	}
+snippet try
+	try {
+		${1}
+	} catch (err) {
+		${2}
 	}
 snippet if
 	if (${1}) {
