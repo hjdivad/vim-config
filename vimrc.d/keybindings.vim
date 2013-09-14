@@ -33,6 +33,13 @@ nmap <leader>t :CommandTFlush<CR>:CommandT<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Use the clipboard as default register
+:nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+:nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
+:nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+:xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+:xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+
 
 function s:update_decorations()
   " Don't need to call gitgutter since syntasticcheck does this indirectly by
