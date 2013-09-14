@@ -10,8 +10,8 @@ snippet fa
 	function (${2}) {
 		${3}
 	}${1}
-snippet fe
-	forEach( function(${1:item}) {
+snippet fore
+	forEach(function(${1:item}) {
 		${3}
 	})${2}
 snippet f:
@@ -19,22 +19,26 @@ snippet f:
 		${4}
 	}${2:,}
 snippet for
-	for (var prop in ${1:expression}) {
-		if ( ! ${2:expression}.hasOwnProperty(prop)) { continue; }
+	for (var ${1:prop} in ${2:expression}) {
+		if (!${3:expression}.hasOwnProperty(${4:prop})) { continue; }
 
-		${3}
+		${5}
 	}
 snippet fori
-	for (var item, i = 0; i < ${1:expression}.length; ++i ) {
-		item = ${2:expression}[i];
-		${3}
+	for (var ${1:item}, i = 0; i < ${2:expression}.length; ++i) {
+		${3:item} = ${4:expression}[i];
+		${5}
 	}
 snippet try
 	try {
 		${1}
-	} catch (err) {
+	} catch (error) {
 		${2}
 	}
+snippet io
+	import ${1:symbol} from "${2:moduleName}";
+snippet im
+	import { ${1:symbols} } from "${2:moduleName}";
 snippet if
 	if (${1}) {
 		${2}
@@ -51,6 +55,14 @@ snippet /**
 	/**
 		${1}
 	*/
+snippet /*g
+	/*global ${1:TheGlobal} */
+snippet @p
+	@param {${1:type}} ${2:name} ${3:description}
+snippet @prop
+	@property {${1:type}} ${2:name} ${3:description}
+snippet @r
+	@returns {${1:returnType}} ${2:returnDescription}
 snippet clog
 	console.log("${1}"${2});
 snippet dp
@@ -64,6 +76,10 @@ snippet dp
 		}
 	});
 snippet sett
-	setTimeout( function (${1}) {
+	setTimeout (function (${1}) {
 		${2}
 	});
+snippet seti
+	setInterval (function () {
+		${2}
+	}, ${1:intervalInMS});
