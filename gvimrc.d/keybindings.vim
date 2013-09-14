@@ -30,8 +30,7 @@ function g:tabReset()
 
   silent tabdo wincmd o
   silent tabdo enew
-  execute ":tabnext 10"
-  silent edit ~/todo.mkd
+  tabfirst
 endfunction
 
 nmap <leader>R :call g:tabReset()<CR>
