@@ -6,3 +6,6 @@ set hlsearch
 " Search case-insensitive when the entire search is lowercase
 set ignorecase
 set smartcase
+
+" Do not search over closed folds
+set foldopen-=search

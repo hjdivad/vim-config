@@ -8,3 +8,6 @@ let g:javascript_conceal=1
 " screwing up folding when switching between windows.
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
+
+command EchoSyntaxStack echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')

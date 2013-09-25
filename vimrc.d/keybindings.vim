@@ -42,11 +42,7 @@ nnoremap k gk
 
 
 function s:update_decorations()
-  " Don't need to call gitgutter since syntasticcheck does this indirectly by
-  " saving
-  "call GitGutter()
-  if ! exists("g:syntastic_disabled")
-    exec "SyntasticCheck"
-  endif
+  " Syntastic checks on write, but no longer writes on SyntasticCheck
+  :write
 endfunction
 nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>

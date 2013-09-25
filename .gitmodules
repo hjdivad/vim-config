@@ -39,7 +39,7 @@
 	url = git://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/vim-handlebars"]
 	path = bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
@@ -67,3 +67,15 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired
+[submodule "bundle/syntax-range"]
+	path = bundle/syntax-range
+	url = git://github.com/vim-scripts/SyntaxRange.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular
