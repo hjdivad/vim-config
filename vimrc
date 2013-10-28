@@ -4,6 +4,7 @@ let maplocalleader=","
 call pathogen#infect()
 
 runtime! vimrc.d/**.vim
+runtime! vimrc.local.d/**.vim
 
 set nocompatible
 set modelines=5
