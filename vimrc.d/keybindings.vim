@@ -33,12 +33,14 @@ nmap <leader>t :CommandTFlush<CR>:CommandT<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Use the clipboard as default register
-:nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
-:nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
-:xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+" Use the clipboard as default register, when available
+if has("clipboard")
+  :nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+  :nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
+  :nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+  :xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+  :xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+endif
 
 
 function s:update_decorations()

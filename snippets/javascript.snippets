@@ -15,9 +15,9 @@ snippet fore
 		${3}
 	})${2}
 snippet f:
-	${1:name}: function (${3}) {
-		${4}
-	}${2:,}
+	${1:name}: function (${2}) {
+		${3}
+	}
 snippet for
 	for (var ${1:prop} in ${2:expression}) {
 		if (!${3:expression}.hasOwnProperty(${4:prop})) { continue; }
@@ -34,9 +34,9 @@ snippet try
 	} catch (error) {
 		${2}
 	}
-snippet io
-	import ${1:symbol} from "${2:moduleName}";
 snippet im
+	import ${1:symbol} from "${2:moduleName}";
+snippet imm
 	import { ${1:symbols} } from "${2:moduleName}";
 snippet if
 	if (${1}) {
@@ -55,15 +55,19 @@ snippet /**
 		${1}
 	*/
 snippet /*g
-	/*global ${1:TheGlobal} */
+	/* global ${1:TheGlobal} */
+snippet /*j
+	/* jshint ${1:option}:${2:value} */
 snippet @p
 	@param {${1:type}} ${2:name} ${3:description}
+snippet @op
+	@param {${1:type}} [${2:name}=${3:defaultValue}] ${4:description}
 snippet @prop
 	@property {${1:type}} ${2:name} ${3:description}
 snippet @r
 	@returns {${1:returnType}} ${2:returnDescription}
 snippet clog
-	console.log("${1}"${2});
+	console.log(${1});
 snippet dp
 	Object.defineProperty(${1:object}, '${2:property}', {
 		get: function () {
