@@ -21,13 +21,8 @@ nmap <leader>d :Bclose!<CR>:enew<CR>
 " to the column of the mark as well as the row
 nnoremap ' `
 
-" List files with Command-T with no caching.  Projects with enough files for
-" caching to be desirable can include the following in their .vimrc
-"
-" nmap <leader>t :CommandT<CR>
-" nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
-"
-nmap <leader>t :CommandTFlush<CR>:CommandT<CR>
+let g:ctrlp_map='<leader>t'
+nmap <leader>b :CtrlPBuffer<CR>
 
 " Move row-wise instead of line-wise
 nnoremap j gj
