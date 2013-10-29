@@ -5,6 +5,7 @@ call pathogen#infect()
 
 runtime! vimrc.d/**.vim
 runtime! vimrc.local.d/**.vim
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 set nocompatible
 set modelines=5
@@ -13,6 +14,9 @@ set modelines=5
 set directory=/var/tmp
 
 set wildmode=list:longest
+
+" Disable show mode when using powerline
+set noshowmode
 
 
 " Turn on line numbers
