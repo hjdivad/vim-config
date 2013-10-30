@@ -97,9 +97,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-ember"]
-	path = bundle/vim-ember
-	url = git://github.com/dsawardekar/ember.vim
-[submodule "bundle/portkey"]
-	path = bundle/portkey
-	url = git://github.com/dsawardekar/portkey
+[submodule "bundle/webapi"]
+	path = bundle/webapi
+	url = git://github.com/mattn/webapi-vim
