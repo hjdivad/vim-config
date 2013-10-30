@@ -21,7 +21,7 @@ nmap <leader>d :Bclose!<CR>:enew<CR>
 " to the column of the mark as well as the row
 nnoremap ' `
 
-let g:ctrlp_map='<leader>t'
+let g:ctrlp_map='<leader>f'
 nmap <leader>b :CtrlPBuffer<CR>
 
 " Move row-wise instead of line-wise
