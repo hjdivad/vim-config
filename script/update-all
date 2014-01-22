@@ -1,0 +1,14 @@
+#!/bin/bash
+
+let failed=''
+
+cd bundle
+for b in `ls`; do
+  pushd $b
+  git checkout master; git pull || failed="$failed $b"
+  popd
+done
+
+if [ -n "$failed" ]; then
+  echo "Problems updating: $failed"
+fi
