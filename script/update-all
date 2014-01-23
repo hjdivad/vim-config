@@ -5,7 +5,9 @@ let failed=''
 cd bundle
 for b in `ls`; do
   pushd $b
-  git checkout master; git pull || failed="$failed $b"
+  if [ -d '.git' ]; then
+    git checkout master; git pull || failed="$failed $b"
+  fi
   popd
 done
 
