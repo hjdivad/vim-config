@@ -6,6 +6,8 @@ cd bundle
 for b in `ls`; do
   pushd $b
   if [ -d '.git' ]; then
+    # TODO: need to handle dumb cases like powerline that put things on
+    # `develop`
     git checkout master; git pull || failed="$failed $b"
   fi
   popd
