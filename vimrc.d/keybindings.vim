@@ -17,13 +17,17 @@ let g:bclose_no_default_mapping=1
 " Close buffers without modifying window layout
 nmap <leader>d :Bclose!<CR>:enew<CR>
 
-nmap <leader>nt :NERDTree<CR>
+nmap <leader>nt :NERDTreeFocus<CR>
 
 " 'x is much easier to hit than `x and has more useful semantics: ie switching
 " to the column of the mark as well as the row
 nnoremap ' `
 
-let g:ctrlp_map='<leader>f'
+" ,f to fuzzy-find files
+nmap <leader>f :<C-U>CtrlP<CR>
+" ,F to fuzzy-find files, blowing up the cache first
+nmap <leader>F :<C-U>CtrlPClearCache<CR>:<C-U>CtrlP<CR>
+" ,b to fuzzy-find buffers
 nmap <leader>b :CtrlPBuffer<CR>
 
 " Move row-wise instead of line-wise

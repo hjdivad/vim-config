@@ -16,11 +16,13 @@ snippet b
 	end
 snippet l
 	let(:${1}) { ${2} }
+snippet s
+	subject { ${1} }
 snippet a
 	after do
 		${1}
 	end
 snippet e
-	expect( ${1}).${2:to} ${3}
+	expect(${1}).${2:to} ${3}
 snippet ec
-	expect{ ${1}}.to change{ ${2}}.from( ${3}).to( ${4})
+	expect{${1}}.to change{${2}}.from(${3}).to(${4})

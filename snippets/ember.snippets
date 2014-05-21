@@ -1,15 +1,3 @@
-snippet route
-	App.${1:My}Route = Ember.Route.extend({
-		${2}
-	});
-snippet oc
-	App.${1:My}Controller = Ember.ObjectController.extend({
-		${2}
-	});
-snippet ac
-	App.${1:My}Controller = Ember.ArrayController.extend({
-		${2}
-	});
 snippet cp
 	${1:name}: function (${3:prop, value}) {
 		${5}
@@ -20,9 +8,5 @@ snippet ts
 	${1:this}.set("${2}", ${3});
 snippet er
 	Ember.run(function() {
-		${1}
-	});
-snippet cwm
-	Ember.Object.createWithMixins({
 		${1}
 	});

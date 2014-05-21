@@ -1,6 +1,10 @@
+snippet if
+	{{#if ${1}}}
+		${2}
+	{{/if}}
 snippet each
-	{{#each}}
-		${1}
+	{{#each ${1}}}
+		${2}
 	{{/each}}
 snippet eachin
 	{{#each ${1} in ${2}}}

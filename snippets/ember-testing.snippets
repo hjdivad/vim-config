@@ -1,0 +1,12 @@
+snippet visit
+	visit("${1:UrlOrRoute}");
+snippet click
+	click("${1:selector}");
+snippet fill
+	fillIn("${1:selector}", "${2:value}");
+snippet trigger
+	triggerEvent("${1:selector}", "${2:eventName}");
+snippet at
+	andThen(function () {
+		${1}
+	});
