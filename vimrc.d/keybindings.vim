@@ -43,6 +43,12 @@ if has("clipboard")
   :xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
 endif
 
+" Use normal window bindings for vim-tmux-navigator
+" nnoremap <silent> <C-W>h :TmuxNavigateLeft<CR>
+" nnoremap <silent> <C-W>j :TmuxNavigateDown<CR>
+" nnoremap <silent> <C-W>k :TmuxNavigateUp<CR>
+" nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
+
 
 function s:update_decorations()
   " Syntastic checks on write, but no longer writes on SyntasticCheck
