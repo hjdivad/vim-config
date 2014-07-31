@@ -10,3 +10,23 @@ snippet er
 	Ember.run(function() {
 		${1}
 	});
+snippet route
+	import Ember from "ember";
+
+	export default Ember.Route.extend({
+		${1}
+	});
+snippet model
+	import DS from "ember-data";
+
+	var attr = DS.attr;
+
+	export default DS.Model.extend({
+		${1}
+	});
+snippet controller
+	import Ember from "ember";
+
+	export default Ember.Controller.extend({
+		${1}
+	});

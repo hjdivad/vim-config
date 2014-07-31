@@ -44,10 +44,11 @@ if has("clipboard")
 endif
 
 " Use normal window bindings for vim-tmux-navigator
-" nnoremap <silent> <C-W>h :TmuxNavigateLeft<CR>
-" nnoremap <silent> <C-W>j :TmuxNavigateDown<CR>
-" nnoremap <silent> <C-W>k :TmuxNavigateUp<CR>
-" nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
+let g:tmux_navigator_no_mappings=1
+nnoremap <silent> <C-W>h :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-W>j :TmuxNavigateDown<CR>
+nnoremap <silent> <C-W>k :TmuxNavigateUp<CR>
+nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
 
 
 function s:update_decorations()
