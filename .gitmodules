@@ -112,3 +112,9 @@
 [submodule "bundle/vim-mustashe-handlebars"]
 	path = bundle/vim-mustashe-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars
+[submodule "bundle/vim-handlebars"]
+	path = bundle/vim-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars
+[submodule "bundle/dash.vim"]
+	path = bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
