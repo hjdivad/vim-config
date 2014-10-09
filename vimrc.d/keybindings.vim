@@ -53,6 +53,17 @@ nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
 
 function s:update_decorations()
   " Syntastic checks on write, but no longer writes on SyntasticCheck
-  :write
+  :silent! write
 endfunction
-nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>
+
+function s:install_enter_hook()
+  nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>
+endfunction
+
+augroup EnterKeyManager
+  autocmd!
+  
+  autocmd CmdwinEnter * nunmap <CR>
+  autocmd CmdwinLeave * call s:install_enter_hook() 
+augroup end
+call s:install_enter_hook()

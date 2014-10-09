@@ -7,7 +7,7 @@ snippet tg
 snippet ts
 	${1:this}.set("${2}", ${3});
 snippet er
-	Ember.run(function() {
+	run(function() {
 		${1}
 	});
 snippet route
@@ -22,6 +22,18 @@ snippet model
 	var attr = DS.attr;
 
 	export default DS.Model.extend({
+		${1}
+	});
+snippet helper
+	import Ember from "ember";
+
+	export default Ember.Handlebars.makeBoundHelper(function (${1}) {
+		${2}
+	});
+snippet mixin
+	import Ember from "ember";
+
+	export default Ember.Mixin.create({
 		${1}
 	});
 snippet controller
