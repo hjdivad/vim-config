@@ -18,6 +18,7 @@ let g:bclose_no_default_mapping=1
 nmap <leader>d :Bclose!<CR>:enew<CR>
 
 nmap <leader>nt :NERDTreeFocus<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 
 " 'x is much easier to hit than `x and has more useful semantics: ie switching
 " to the column of the mark as well as the row
