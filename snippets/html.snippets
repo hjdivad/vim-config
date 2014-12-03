@@ -5,14 +5,38 @@ snippet html
 		<title>${1}</title>
 	</head>
 	<body>
-		${2}
+		${0}
 	</body>
 	</html>
 snippet script
-	<script src="${1}"></script>
+	<script src="${0}"></script>
 snippet link
 	<link rel="${1:stylesheet}" type="${2:text/css}" href="${3}" />
 snippet div
-	<div>${1}</div>
+	<div>${0}</div>
 snippet p
-	<p>${1}</p>
+	<p>${0}</p>
+snippet img
+	<img src="${0}" />
+snippet th
+	<th>${0}</th>
+snippet td
+	<td>${0}</td>
+snippet tbody
+	<tbody>
+		${0}
+	</tbody>
+snippet tr
+	<tr>
+		${0}
+	</tr>
+snippet cl
+	class="${0}"
+snippet label
+	<label>${0}</label>
+snippet h1
+	<h1>${0}</h1>
+snippet h2
+	<h2>${0}</h2>
+snippet h3
+	<h3>${0}</h3>

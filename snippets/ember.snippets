@@ -1,20 +1,20 @@
 snippet cp
 	${1:name}: function (${3:prop, value}) {
-		${5}
-	}.property(${2})${4}
+		${0}
+	}.property(${2}),
 snippet tg
-	${1:this}.get("${2}")${3}
+	${1:this}.get("${2}")${0}
 snippet ts
-	${1:this}.set("${2}", ${3});
+	${1:this}.set("${2}", ${0});
 snippet er
 	run(function() {
-		${1}
+		${0}
 	});
 snippet route
 	import Ember from "ember";
 
 	export default Ember.Route.extend({
-		${1}
+		${0}
 	});
 snippet model
 	import DS from "ember-data";
@@ -22,41 +22,55 @@ snippet model
 	var attr = DS.attr;
 
 	export default DS.Model.extend({
-		${1}
+		${0}
 	});
 snippet helper
 	import Ember from "ember";
 
 	export default Ember.Handlebars.makeBoundHelper(function (${1}) {
-		${2}
+		${0}
 	});
+snippet initializer
+	export default {
+		name: '${1}',
+
+		initialize: function (container, app) {
+			${0}
+		},
+	};
 snippet mixin
 	import Ember from "ember";
 
 	export default Ember.Mixin.create({
-		${1}
+		${0}
 	});
 snippet controller
 	import Ember from "ember";
 
 	export default Ember.Controller.extend({
-		${1}
+		${0}
 	});
 snippet objectcontroller
 	import Ember from "ember";
 
 	export default Ember.ObjectController.extend({
-		${1}
+		${0}
 	});
 snippet arraycontroller
 	import Ember from "ember";
 
 	export default Ember.ArrayController.extend({
-		${1}
+		${0}
 	});
 snippet view
 	import Ember from "ember";
 
 	export default Ember.View.extend({
-		${1}
+		${0}
+	});
+snippet component
+	import Ember from "ember";
+
+	export default Ember.Component.extend({
+		${0}
 	});

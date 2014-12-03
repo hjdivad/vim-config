@@ -1,32 +1,32 @@
 snippet d
 	describe "${1}" do
-		${2}
+		${0}
 	end
 snippet c
 	context "${1}" do
-		${2}
+		${0}
 	end
 snippet it
 	it "${1}" do
-		${2:expect("implemented").to be true}
+		${0:expect("implemented").to be true}
 	end
 snippet b
 	before do
-		${1}
+		${0}
 	end
 snippet l
-	let(:${1}) { ${2} }
+	let(:${1}) { ${0} }
+snippet lb
+	let!(:${1}) { ${0} }
 snippet s
-	subject { ${1} }
+	subject { ${0} }
 snippet a
 	after do
-		${1}
+		${0}
 	end
 snippet e
 	expect(${1}).${2:to}
 snippet eb
-	expect{${1}}.${2:to} $3
+	expect{${1}}.${0:to}
 snippet ch
-	change{${1}}.from(${2}).to(${3})
-snippet cb
-	change{${1}}.by(${2})
+	change{${1}}

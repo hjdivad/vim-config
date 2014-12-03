@@ -1,20 +1,20 @@
 snippet t
 	test("${1}", function() {
-		${2}
+		${0}
 	});
 # For people who keep typing `it` from a bdd habit. ^_^
 snippet it
 	test("${1}", function() {
-		${2}
+		${0}
 	});
 snippet th
 	throws(function() {
-		${3}
+		${0}
 	}, /${1:ErrorPattern}/, "${2:message}");
 snippet e
-	equal(${1}, ${2});
+	equal(${1}, ${0});
 snippet ex
-	expect(${1});
+	expect(${0});
 snippet ok
 	ok(${1:true}, "${2}");
 snippet de
