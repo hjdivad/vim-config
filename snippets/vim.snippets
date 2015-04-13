@@ -1,11 +1,11 @@
 snippet aug
 	augroup ${1:group}
 		autocmd!
-		${2}
+		${0}
 	augroup end
 snippet	au
-	autocmd ${1:EventNames} ${2:file_pattern} ${3}
+	autocmd ${1:EventNames} ${2:file_pattern} ${0}
 snippet fs
 	function s:${1:name}()
-		${2}
+		${0}
 	endfunction

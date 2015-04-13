@@ -52,6 +52,11 @@ snippet sw
 		default:
 			${4}
 	}
+snippet case
+	case ${1:expression}:
+		${2}
+		break;
+
 snippet /**
 	/**
 		${0}
@@ -62,14 +67,19 @@ snippet /*j
 	/* jshint ${1:option}:${2:value} */
 snippet /*e
 	/* exported ${0:exportName} */
-snippet @p
+snippet @param
 	@param {${1:type}} ${2:name} ${3:description}
-snippet @op
+snippet @param-optional
 	@param {${1:type}} [${2:name}=${3:defaultValue}] ${4:description}
-snippet @prop
+snippet @property
 	@property {${1:type}} ${2:name} ${3:description}
-snippet @r
+snippet @default
+	@default ${0:value}
+snippet @returns
 	@returns {${1:returnType}} ${2:returnDescription}
+snippet @example
+	@example
+		${0}
 snippet clog
 	console.log(${0});
 snippet dp

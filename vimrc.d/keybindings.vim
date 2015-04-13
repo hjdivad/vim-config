@@ -51,6 +51,8 @@ nnoremap <silent> <C-W>j :TmuxNavigateDown<CR>
 nnoremap <silent> <C-W>k :TmuxNavigateUp<CR>
 nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
 
+vnoremap <leader>T :Tabularize<CR>
+
 
 function s:update_decorations()
   " Syntastic checks on write, but no longer writes on SyntasticCheck

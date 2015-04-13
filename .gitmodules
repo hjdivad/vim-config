@@ -121,3 +121,9 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "bundle/dockerfile.vim"]
+	path = bundle/dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/vim-emblem"]
+	path = bundle/vim-emblem
+	url = https://github.com/heartsentwined/vim-emblem.git
