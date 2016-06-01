@@ -1,30 +1,31 @@
 snippet t
-	test("${1}", function() {
+	test('${1}', function(assert) {
 		${0}
 	});
 # For people who keep typing `it` from a bdd habit. ^_^
 snippet it
-	test("${1}", function() {
+	test('${1}', function(assert) {
 		${0}
 	});
 snippet th
 	throws(function() {
 		${0}
-	}, /${1:ErrorPattern}/, "${2:message}");
+	}, /${1:ErrorPattern}/, '${2:message}');
 snippet e
-	equal(${1}, ${0});
+	assert.equal(${1}, ${0});
 snippet ex
-	expect(${0});
+	assert.expect(${0});
 snippet ok
-	ok(${1:true}, "${2}");
+	assert.ok(${1:true}, '${2}');
 snippet de
-	deepEqual(${1}, ${2}, "${3}");
+	assert.deepEqual(${1}, ${2}, '${3}');
 snippet m
-	module('${1}', {
-		setup: function() {
-			${2}
-		},
-		teardown: function() {
-			${3}
-		}
-	});
+	module('${0}');
+snippet	be
+	beforeEach() {
+		${0}
+	}${1}
+snippet ae
+	afterEach() {
+		${0}
+	}${1}

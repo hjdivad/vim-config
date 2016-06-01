@@ -26,4 +26,3 @@ if has("digraphs")
   digraph ki 9812   " ♔ 
   digraph kn 9816   " ♘ 
 endif
-

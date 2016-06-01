@@ -1,12 +1,16 @@
 snippet visit
-	visit("${0:UrlOrRoute}");
+	visit('${0:UrlOrRoute}');
 snippet click
-	click("${0:selector}");
+	click('${0:selector}');
 snippet fill
-	fillIn("${1:selector}", "${2:value}");
+	fillIn('${1:selector}', "${2:value}");
 snippet trigger
-	triggerEvent("${1:selector}", "${2:eventName}");
+	triggerEvent('${1:selector}', "${2:eventName}");
 snippet at
 	andThen(function () {
 		${0}
 	});
+snippet let
+	${1:name}: function (options, factory, container) {
+		${0}
+	},

@@ -2,7 +2,10 @@
 set autoread
 set autowrite
 set autowriteall
-autocmd BufLeave,FocusLost * silent! wall
+augroup AutoWrite
+  autocmd!
+  autocmd BufLeave,FocusLost * silent! wall
+augroup end
 
 " Switch modified buffers without being forced to save
 set hidden

@@ -1,16 +1,16 @@
 snippet d
-	describe("${1}", function() {
+	describe('${1}', function() {
+		${2}
+	});
+snippet c
+	context('${1}', function() {
 		${2}
 	});
 snippet it
-	it("${1}", function() {
-		${2}
+	it('${1}', function() {
+		expect('assertions exist').to.be(true);
 	});
 snippet b
 	beforeEach( function() {
 		${1}
 	});
-snippet e
-	expect(${1}).${2}
-snippet de
-	deep.equal(${1})

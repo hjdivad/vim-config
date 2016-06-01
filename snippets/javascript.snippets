@@ -12,18 +12,36 @@ snippet fa
 	function (${2}) {
 		${0}
 	}${1}
+snippet fp
+	${1:name}(${2}) {
+		${0}
+	},
+snippet af
+	(${1}) => {
+		${0}
+	}
+snippet afi
+	(${1}) => ${0}
+snippet method
+	${1:name}(${2}) {
+		${0}
+	}
 snippet fore
-	forEach(function(${1:item}) {
+	forEach((${1:item}) => {
 		${0}
 	})${2}
 snippet f:
 	${1:name}: function (${2}) {
 		${0}
 	},
-snippet for
-	for (var ${1:prop} in ${2:expression}) {
+snippet forin
+	for (let ${1:prop} in ${2:expression}) {
 		if (!${3:expression}.hasOwnProperty(${4:prop})) { continue; }
 
+		${0}
+	}
+snippet forof
+	for (let ${1:prop} of ${2:iterable}) {
 		${0}
 	}
 snippet fori
@@ -37,9 +55,9 @@ snippet try
 		${2}
 	}
 snippet im
-	import ${1:symbol} from "${2:moduleName}";
+	import ${1:symbol} from '${2:moduleName}';
 snippet imm
-	import { ${1:symbols} } from "${2:moduleName}";
+	import { ${1:symbols} } from '${2:moduleName}';
 snippet if
 	if (${1}) {
 		${0}
@@ -73,10 +91,22 @@ snippet @param-optional
 	@param {${1:type}} [${2:name}=${3:defaultValue}] ${4:description}
 snippet @property
 	@property {${1:type}} ${2:name} ${3:description}
+snippet @private
+	@private
+snippet @protected
+	@protected
 snippet @default
 	@default ${0:value}
-snippet @returns
-	@returns {${1:returnType}} ${2:returnDescription}
+snippet @return
+	@return {${1:returnType}} ${0:returnDescription}
+snippet @since
+	@since ${0:version}
+snippet @for
+	@for ${0:for}
+snippet @method
+	@method ${0:methodName}
+snippet @public
+	@public
 snippet @example
 	@example
 		${0}
@@ -100,3 +130,16 @@ snippet seti
 	setInterval (function () {
 		${0}
 	}, ${1:intervalInMS});
+snippet class
+	class ${1:name} {
+		${0}
+	}
+snippet constructor
+	constructor(${1}) {
+		${0}
+	}
+snippet //-
+	// ----------------------------------------------------------------------
+	// ${1}
+
+${0}

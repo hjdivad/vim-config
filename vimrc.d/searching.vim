@@ -9,3 +9,6 @@ set smartcase
 
 " Do not search over closed folds
 set foldopen-=search
+
+" Make searches very magic (ie 'not shit')
+nnoremap / /\v

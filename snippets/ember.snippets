@@ -7,7 +7,7 @@ snippet tg
 snippet ts
 	${1:this}.set('${2}', ${0});
 snippet er
-	run(function() {
+	run(() => {
 		${0}
 	});
 snippet route
@@ -34,10 +34,16 @@ snippet initializer
 	export default {
 		name: '${1}',
 
-		initialize: function (container, app) {
+		initialize: function (registry) {
 			${0}
 		},
 	};
+snippet service
+	import Ember from 'ember';
+
+	export default Ember.Service.extend({
+		${0}
+	});
 snippet mixin
 	import Ember from "ember";
 
@@ -48,18 +54,6 @@ snippet controller
 	import Ember from "ember";
 
 	export default Ember.Controller.extend({
-		${0}
-	});
-snippet objectcontroller
-	import Ember from "ember";
-
-	export default Ember.ObjectController.extend({
-		${0}
-	});
-snippet arraycontroller
-	import Ember from "ember";
-
-	export default Ember.ArrayController.extend({
 		${0}
 	});
 snippet view

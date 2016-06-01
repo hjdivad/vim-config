@@ -1,0 +1,2 @@
+abbreviate :beer: 🍺
+abbreviate :beers: 🍻
