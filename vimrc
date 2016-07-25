@@ -21,6 +21,8 @@ set noshowmode
 
 " Turn on line numbers
 set number
+" and make them relative
+set relativenumber
 " Highlight current line
 set cursorline
 
