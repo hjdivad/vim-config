@@ -36,8 +36,6 @@ snippet f:
 	},
 snippet forin
 	for (let ${1:prop} in ${2:expression}) {
-		if (!${3:expression}.hasOwnProperty(${4:prop})) { continue; }
-
 		${0}
 	}
 snippet forof
@@ -114,11 +112,11 @@ snippet clog
 	console.log(${0});
 snippet dp
 	Object.defineProperty(${1:object}, '${2:property}', {
-		get: function () {
+		get() {
 			${3}
 		},
 
-		set: function () {
+		set() {
 			${4}
 		}
 	});
