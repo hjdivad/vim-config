@@ -54,13 +54,15 @@ nnoremap <silent> <C-W>l :TmuxNavigateRight<CR>
 vnoremap <leader>T :Tabularize<CR>
 
 
-function s:update_decorations()
-  " Syntastic checks on write, but no longer writes on SyntasticCheck
-  :silent! write
-endfunction
+" map <leader>r to a command to set up <leader>r
+nnoremap <leader>r :nnoremap <leader>r :silent exec('!tmux send-keys -t bottom-left "" c-m') \\| execute ':redraw!' <lt>CR><C-F>?"<CR>:nohl<CR>i
+
+" map <leader>R to a command to set up <leader>r
+nnoremap <leader>R :nnoremap <leader>R :silent exec('!tmux send-keys -t bottom-left "" c-m; and tmux select-pane -t bottom-left') \\| execute ':redraw!' <lt>CR><C-F>?"<CR>:nohl<CR>i
+
 
 function s:install_enter_hook()
-  nnoremap <CR> :nohl<CR>:call <SID>update_decorations()<CR>
+  nnoremap <CR> :nohl<CR>
 endfunction
 
 augroup EnterKeyManager
