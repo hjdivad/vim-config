@@ -1,11 +1,16 @@
-" Read and write eagerly
+" Read eagerly
 set autoread
-set autowrite
-set autowriteall
-augroup AutoWrite
-  autocmd!
-  autocmd BufLeave,FocusLost * silent! wall
-augroup end
+
+
+" Uncomment to enable eager writing.  Kind of annoying with broccoli
+"
+" set autowrite
+" set autowriteall
+" augroup AutoWrite
+"   autocmd!
+"   autocmd BufLeave,FocusLost * silent! wall
+" augroup end
+
 
 " Switch modified buffers without being forced to save
 set hidden
