@@ -12,7 +12,7 @@ let g:javascript_conceal_static     = "•"
 let g:javascript_conceal_super      = "Ω"
 
 
-let g:syntastic_javascript_checkers = [ 'eslint', 'jshint' ]
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 " I've disabled this for now as it causes several problems, like making new
