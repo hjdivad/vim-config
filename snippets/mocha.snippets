@@ -8,13 +8,13 @@ snippet c
 	});
 snippet it
 	it('${1}', function() {
-		expect('assertions exist').to.eql(true);
+		expect('${0:this thing is tested}').to.equal(true);
 	});
 snippet be
-	beforeEach( function() {
+	beforeEach(function() {
 		${1}
 	});
 snippet ae
-	afterEach( function() {
+	afterEach(function() {
 		${1}
 	});
