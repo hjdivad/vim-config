@@ -31,6 +31,9 @@ nmap <leader>F :<C-U>CtrlPClearCache<CR>:<C-U>CtrlP<CR>
 " ,b to fuzzy-find buffers
 nmap <leader>b :CtrlPBuffer<CR>
 
+" yank filename
+nmap <leader>yf :let @+=expand('%')<CR>
+
 " Move row-wise instead of line-wise
 nnoremap j gj
 nnoremap k gk
